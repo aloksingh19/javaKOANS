@@ -78,6 +78,6 @@ public class AboutComparison {
         Arrays.sort(horses, new HorseAgeComparator());
         assertEquals(horses[0], lightning);
         Arrays.sort(horses, new HorseSpeedComparator());
-        assertEquals(horses[0], "chhejckslx");
+        assertEquals(horses[0], slowy);
     }
 }
