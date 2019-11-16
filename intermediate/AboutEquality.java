@@ -41,11 +41,13 @@ public class AboutEquality {
         public boolean equals(Object other) {
             // Change this implementation to match the equals contract
             // Car objects with same horsepower and name values should be considered equal
-            // http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object)
+//            // http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object)
             if(!(other instanceof Car)){
                 return false;
             }
-            if( other.hashCode() == this.hashCode()){
+
+
+            if(other.hashCode() == this.hashCode()){
                 return true;
             }
             return false;
@@ -54,7 +56,8 @@ public class AboutEquality {
         @Override
         public int hashCode() {
             // @see http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#hashCode()
-            return (this.horsepower + this.name).hashCode();
+            return (this.horsepower+ this.name).hashCode();
+           // return super.hashCode();
         }
     }
 
