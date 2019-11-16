@@ -92,13 +92,16 @@ public class AboutInnerClasses {
 
     @Koan
     public void creatingAnonymousInnerClassesToImplementInterface() {
-        Ignoreable ignoreable = new Ignoreable() {
-            public String ignoreAll() {
-                return null;
-            }
-        }; // Complete the code so that the statement below is correct.
+        class Ignore implements Ignoreable{
+            public String ignoreAll(){
+                return "";
+            };
+        }
+
+        Ignoreable ignoreable = new Ignore();
+         // Complete the code so that the statement below is correct.
         // Look at the koan above for inspiration
-        assertEquals(ignoreable.ignoreAll(), null);
+        assertEquals(ignoreable.ignoreAll(), "");
         // Did you just created an object of an interface type?
         // Or did you create a class that implemented this interface and
         // an object of that type?
